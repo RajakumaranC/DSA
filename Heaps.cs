@@ -4,10 +4,10 @@ namespace Algorithms
 {
 
     /// <summary>
-    /// This is a simple Heap implementaiton that stores integer data
-    /// To idenfity min heap or max heap, the ctor takes in a comparer function
-    /// To create min heap pass in the static function as delegate new Heap(Heap.MIN_HEAP)
-    /// Similarly to create max heap do new Heap(Heap.MAX_HEAP)
+    /// This is a simple Heap implementaiton that stores integer data.
+    /// To idenfity min heap or max heap, pass appropriate static delegate within Heap class to the constructor.
+    /// To create min heap do --- new Heap(Heap.MIN_HEAP);
+    /// To create max heap do --- new Heap(Heap.MAX_HEAP);
     /// </summary>
     public class Heap
     {
