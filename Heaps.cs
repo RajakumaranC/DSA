@@ -13,12 +13,26 @@ namespace Algorithms
     {
 
         private List<int> _heap;
+        public int Count {get; private set;}
         private Func<int, int, bool> _comparer;
 
-        public Heap(Func<int, int, bool> comparer)
+        public Heap(Func<int, int, bool> comparer, List<int> seed)
         {
             _comparer = comparer;
-            _heap = new List<int>();
+            _heap = HeapBuilder(seed);
+            Count = _heap.Count;
+        }
+
+        public List<int> HeapBuilder(List<int> seed)
+        {
+            int parent = ParentIdx(seed.Count - 1);
+            for(int i = parent; i >= 0; i--)
+            {
+                ShiftDown(i, seed.Count - 1, seed);
+                
+            }
+
+            return seed;
         }
 
 
@@ -31,20 +45,22 @@ namespace Algorithms
         public void Insert(int value)
         {
             _heap.Add(value);
-            ShiftUp(); // todo;
+            Count += 1;
+            ShiftUp(_heap.Count - 1, _heap); 
 
 
         }
 
         public int? Remove()
         {
-            if(_heap.Count == 0) return null;
+            if(Count == 0) return null;
 
 
             int extracted = _heap[0];
             _heap[0] = _heap[_heap.Count - 1];
             _heap.RemoveAt(_heap.Count - 1);
-            ShiftDown(); //todo;
+            ShiftDown(0, _heap.Count - 1, _heap); 
+            Count -= 1;
             return extracted;
 
         }
@@ -62,22 +78,21 @@ namespace Algorithms
             }
         }
 
-        private void ShiftDown()
+        private void ShiftDown(int current, int end, List<int> heap)
         {
-            int parent = 0;
-            int end = _heap.Count - 1;
+            int parent = current;
 
             int leftChild = LeftChildIndex(parent);
             while(leftChild <= end)
             {
                 int idxToChange = leftChild;
                 int rightChild = RightChildIndex(parent);
-                if(rightChild <= end && _comparer(_heap[rightChild], _heap[leftChild]))
+                if(rightChild <= end && _comparer(heap[rightChild], heap[leftChild]))
                 {
                     idxToChange = rightChild;
                 }
 
-                if(_comparer(_heap[idxToChange], _heap[parent]))
+                if(_comparer(heap[idxToChange], heap[parent]))
                 {
                     Swap(idxToChange, parent); // todo
                     parent = idxToChange;
@@ -93,11 +108,11 @@ namespace Algorithms
         }
 
 
-        private void ShiftUp()
+        private void ShiftUp(int current, List<int> heap)
         {
-            int current = _heap.Count - 1;
+            
             int parentIdx = ParentIdx(current);
-            while(current > 0 && _comparer(_heap[current], _heap[parentIdx]))
+            while(current > 0 && _comparer(heap[current], heap[parentIdx]))
             {
                 Swap(parentIdx, current);
                 current = parentIdx;

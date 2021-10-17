@@ -7,7 +7,7 @@ namespace Algorithms
         public static void Main(string[] args)
         {
 
-            Heap sample = new Heap(Heap.MIN_HEAP);
+            Heap sample = new Heap(Heap.MIN_HEAP, new List<int>());
             sample.Insert(10);
             sample.Insert(15);
             sample.Insert(0);
