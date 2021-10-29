@@ -10,17 +10,19 @@ namespace Algorithms
 
             List<int> list = new List<int>();
             Random rand = new Random();
-            for(int i = 0; i < 1000; i++)
+            int max = 100;
+            for(int i = 0; i < max; i++)
             {
-                list.Add(rand.Next(-1000, 1000));
+                list.Add(rand.Next(-max, max));
             }
 
+            string[] names = {"Raj", "raj", "RAJ"};
             int[] array = list.ToArray();
-            WriteLine(String.Join(", ", array));
+            WriteLine(String.Join(", ", names));
             WriteLine("===========================================");
             WriteLine("Sorting it now");
-            Sorting.HeapSort(array);
-            WriteLine(String.Join(", ", array));
+            Sorting.QuickSort(names, descending:false);
+            WriteLine(String.Join(", ", names));
             WriteLine("===========================================");
         }
     }

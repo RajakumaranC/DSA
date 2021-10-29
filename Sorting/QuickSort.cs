@@ -3,28 +3,32 @@ namespace Algorithms
     public partial class Sorting
     {
 
-        public static void QuickSort<T>(T[] array) where T : IComparable
+        public static void QuickSort<T>(T[] array, bool descending = false) where T : IComparable
         {
-            QuickSort(array, 0, array.Length - 1, Comparer<T>.Default);
+            if(descending)
+                QuickSort(array, 0, array.Length - 1, Comparer<T>.Create((x,y) => y.CompareTo(x)));
+            
+            else
+                QuickSort(array, 0, array.Length - 1, Comparer<T>.Default);
         }
 
-        public static void QuickSort<T>(T[] array, Comparer<T> comparer) where T : IComparable
+        private static void QuickSort<T>(T[] array, Comparer<T> comparer)
         {
             QuickSort(array, 0, array.Length - 1, comparer);
         }
 
         
-        public static void QuickSort<T>(T[] array, int lower, int upper, IComparer<T> comparer) where T : IComparable
+        private static void QuickSort<T>(T[] array, int lower, int upper, IComparer<T> comparer)
         {
             if(lower < upper)
             {
                 int p = Partition(array, lower, upper, comparer);
-                QuickSort(array, lower, p, comparer);
+                QuickSort(array, lower, p - 1, comparer);
                 QuickSort(array, p + 1, upper, comparer);
             }
         }
 
-        private static int Partition<T>(T[] array, int lower, int upper, IComparer<T> comparer) where T : IComparable
+        private static int Partition<T>(T[] array, int lower, int upper, IComparer<T> comparer)
         {
             int p = lower;
             T pivot = array[p];
@@ -32,17 +36,20 @@ namespace Algorithms
             int j = upper;
 
             
-            do{
-                while(comparer.Compare(array[i], array[p]) < 0) { i++; }
-                while(comparer.Compare(array[j], array[p]) > 0) { j--; }
+           while(i < j)
+           {
+                // while(array[i].CompareTo(pivot) <= 0) { i++; }
+                // while(array[j].CompareTo(pivot) > 0) { j--; }
 
-                if(i >= j)
-                {
-                    break;
-                }
-                Swap(array, i, j);
+                while(comparer.Compare(array[i], pivot) <= 0) { i++; }
+                while(comparer.Compare(array[j], pivot) > 0) { j--; }
 
-            }while(i <= j);
+                if(i < j)
+                    Swap(array, i, j);
+
+            }
+
+            Swap(array, p, j);
 
             return j;
         }

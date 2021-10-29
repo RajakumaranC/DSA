@@ -35,4 +35,18 @@
 
     this the worst so far of every sorting algorithm. In this, we compare each element to the next element and swap if its not in the right order.
 
+## 4. Heap Sort
+
+    The name gives you the hint, You use a heap to sort the array. You can either
+    1. Push all elements in a heap and then take one by one out. that way you get the sorted array. But this takes O(N) space as you have to maintain a heap of n elements. 
+    2. We can do it with constant space by just building a heap by swapping elements inplace using heap's concept of representing in an array. 
+    1. start form last elements parent and shift down until element finds its home
+    2. Do this for all elements previous to that parent in a reverse loop. 
+    3. Now you got a heap. Now how to sort it. 
+    4. we know first element is the smallest in the min heap, 
+    so to get reverse order, just put the element in last spot 
+    5. now the first element will be out of place, shfit it down till it finds it spot (shift till last but 1 space) coz last element is the smallest so we shouldn't touch. 
+    6. Do this for all elements. 
+    
+
 
