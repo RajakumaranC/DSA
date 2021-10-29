@@ -16,16 +16,12 @@ namespace Algorithms
             }
 
             int[] array = list.ToArray();
-
             WriteLine(String.Join(", ", array));
             WriteLine("===========================================");
             WriteLine("Sorting it now");
             Sorting.HeapSort(array);
-
             WriteLine(String.Join(", ", array));
             WriteLine("===========================================");
-
-
         }
     }
 }
