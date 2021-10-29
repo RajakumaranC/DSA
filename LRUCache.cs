@@ -21,7 +21,7 @@ namespace Algorithms
 		}
 
 		public void InsertKeyValuePair(string key, int value) {
-			// Write your code here.
+			
             if(store_map.ContainsKey(key))
             {
                 DoubleLinkedListNode current = store_map[key];
@@ -41,11 +41,10 @@ namespace Algorithms
         {
             if(store_map.Count <= 0)
                 return;
-            
+#nullable disable
             string key = store_list.tail.key;
             store_map.Remove(key);
             store_list.RemoveTail();
-
         }
 
         private void UpdateRecentlyUsed(string key)
@@ -55,7 +54,7 @@ namespace Algorithms
         }
 
         public LRUResult GetValueFromKey(string key) {
-			// Write your code here.
+			
             
             if(store_map.ContainsKey(key))
             {
@@ -67,7 +66,7 @@ namespace Algorithms
 		}
 
 		public string GetMostRecentKey() {
-			// Write your code here.
+			
             if(store_map.Count > 0)
             {
                 string key = store_list.head.key;

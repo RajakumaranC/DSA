@@ -4,8 +4,8 @@ namespace Algorithms
     {
         public int value;
         public string key;
-        public DoubleLinkedListNode next;
-        public DoubleLinkedListNode prev;
+        public DoubleLinkedListNode? next;
+        public DoubleLinkedListNode? prev;
 
         public DoubleLinkedListNode(int value, string key)
         {

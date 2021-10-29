@@ -1,9 +1,11 @@
 namespace Algorithms
 {
+    #nullable enable
+    
     public class DoubleLinkedList
     {
-        public DoubleLinkedListNode head;
-        public DoubleLinkedListNode tail;
+        public DoubleLinkedListNode? head;
+        public DoubleLinkedListNode? tail;
 
         public void SetHead(DoubleLinkedListNode node)
         {
@@ -45,7 +47,7 @@ namespace Algorithms
                 tail = null;
             }
 
-            tail = tail.prev;
+            tail = tail?.prev;
             tail.next = null;
 
         }
