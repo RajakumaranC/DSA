@@ -1,0 +1,51 @@
+LRU Cache
+# O(1) insert | O(1) retrieve | O(1) evection * (not directly used)
+
+LRU API
+public InsertKeyValuePair: void (string key, int val); ---> O(1)
+
+public GetValueFromKey: int (string key) ---> O(1) 
+
+public GetMostRecentKey: string () --> O(1)
+
+private UpdateRecentlyUsed: void (string key);
+
+private EvictLeastUsed: void ();
+
+
+// internal to LRU 
+
+Store --> ? 
+    Since its O(1) insert --> i can take array, LL stack and queue
+    O(1) --> retreival so i can only use array/hashmap --> since key is string go with hashmap
+    O(1) --> update recent used --> can use only Double LL 
+    
+
+    DS --> hashmap with Double LL 
+
+    Double LL Node API
+
+    public int value; 
+    public next;
+    public prev;
+
+    ctor --> sets value;
+
+    setHead();
+        if its head ==> return 
+        if its tail == head 
+        if tail 
+
+
+
+    RemoveBindings();
+
+    RemoveTail();
+
+    if tail == null;
+    return 
+    
+
+
+
+

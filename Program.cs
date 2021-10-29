@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿using Famous_Algorithms;
+using static System.Console;
 
 namespace Algorithms
 {
@@ -7,35 +8,22 @@ namespace Algorithms
         public static void Main(string[] args)
         {
 
-            Heap sample = new Heap(Heap.MIN_HEAP, new List<int>());
-            sample.Insert(10);
-            sample.Insert(15);
-            sample.Insert(0);
-            sample.Insert(4);
-            sample.Insert(6);
-            sample.Insert(3);
-            sample.Insert(1);
-            sample.Insert(-1);
-            sample.Insert(7);
-            sample.Insert(-4);
-            sample.Insert(3);
+            List<int> list = new List<int>();
+            Random rand = new Random();
+            for(int i = 0; i < 1000; i++)
+            {
+                list.Add(rand.Next(-1000, 1000));
+            }
 
-            sample.printHeap();
-            ReadLine();
+            int[] array = list.ToArray();
 
-            WriteLine(sample.Remove());
-            WriteLine(sample.Remove());
-            WriteLine(sample.Remove());
-            WriteLine(sample.Remove());
-            WriteLine(sample.Remove());
-            WriteLine(sample.Remove());
-            WriteLine(sample.Remove());
-            WriteLine(sample.Remove());
-            WriteLine(sample.Remove());
-            WriteLine(sample.Remove());
-            WriteLine(sample.Remove());
+            WriteLine(String.Join(", ", array));
+            WriteLine("===========================================");
+            WriteLine("Sorting it now");
+            Sorting.HeapSort(array);
 
-
+            WriteLine(String.Join(", ", array));
+            WriteLine("===========================================");
 
 
         }
