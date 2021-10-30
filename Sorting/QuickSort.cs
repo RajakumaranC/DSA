@@ -3,22 +3,19 @@ namespace Algorithms
     public partial class Sorting
     {
 
-        public static void QuickSort<T>(T[] array, bool descending = false) where T : IComparable
+        public static void QuickSort<T>(T[] array) where T : IComparable
         {
-            if(descending)
-                QuickSort(array, 0, array.Length - 1, Comparer<T>.Create((x,y) => y.CompareTo(x)));
             
-            else
-                QuickSort(array, 0, array.Length - 1, Comparer<T>.Default);
+            QuickSort(array, 0, array.Length - 1, Comparer<T>.Default);
         }
 
-        private static void QuickSort<T>(T[] array, Comparer<T> comparer)
+        public static void QuickSort<T>(T[] array, Comparer<T> comparer)
         {
             QuickSort(array, 0, array.Length - 1, comparer);
         }
 
         
-        private static void QuickSort<T>(T[] array, int lower, int upper, IComparer<T> comparer)
+        public static void QuickSort<T>(T[] array, int lower, int upper, IComparer<T> comparer)
         {
             if(lower < upper)
             {

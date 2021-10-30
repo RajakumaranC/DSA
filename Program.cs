@@ -17,13 +17,15 @@ namespace Algorithms
             }
 
             string[] names = {"Raj", "raj", "RAJ"};
-            int[] array = list.ToArray();
-            WriteLine(String.Join(", ", names));
-            WriteLine("===========================================");
-            WriteLine("Sorting it now");
-            Sorting.QuickSort(names, descending:false);
-            WriteLine(String.Join(", ", names));
-            WriteLine("===========================================");
+            string a = "rajr";
+            WriteLine(a.Substring_KMP("aj"));
+            // int[] array = list.ToArray();
+            // WriteLine(String.Join(", ", array));
+            // WriteLine("===========================================");
+            // WriteLine("Sorting it now");
+            // Sorting.QuickSort(array, Comparer<int>.Create((x,y) => y.CompareTo(x)));
+            // WriteLine(String.Join(", ", array));
+            // WriteLine("===========================================");
         }
     }
 }

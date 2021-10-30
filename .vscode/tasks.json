@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "build - debug",
             "command": "dotnet",
             "type": "process",
             "args": [
@@ -11,20 +11,26 @@
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         },
         {
-            "label": "build:relase",
+            "label": "build - relase",
             "command": "dotnet",
             "type": "process",
             "args": [
-                "--configuration release",
                 "build",
-                "${workspaceFolder}/Algorithms.csproj",
+                "${workspaceFolder}\\Algorithms.csproj",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "/consoleloggerparameters:NoSummary",
+                "-c",
+                "Release"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "detail": "Builds the Release version of the application"
         },
         {
             "label": "publish",
