@@ -1,6 +1,5 @@
 namespace Algorithms
 {
-    #nullable enable
     
     public class DoubleLinkedList
     {

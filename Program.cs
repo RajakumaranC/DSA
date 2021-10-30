@@ -1,5 +1,4 @@
 ﻿using Famous_Algorithms;
-using static System.Console;
 
 namespace Algorithms
 {

@@ -7,39 +7,19 @@ namespace Famous_Algorithms
     /// </summary>
     public static class KMP
     {
-        public static bool Substring_KMP(this string str, string substring)
+        // O(N) + O(M) --> O( N + M ) Time | O(M) space
+        public static bool Substring_KMP(this string str, string substring) 
         {
             if(substring.Length > str.Length) return false;
 
             int[] pattern = BuildPattern(substring); // O(M) time | O(M) space
 
-            return FindMatch(str, substring, pattern); // 
+            return FindMatch(str, substring, pattern); // O(N) time | O(1) space
         }
 
-        private static bool FindMatch(string str, string substring, int[] pattern)
-        {
-            int i = 0; 
-            int j = 0;
-            while(i + substring.Length - j <= str.Length)
-            {
-                if(str[i] == substring[j])
-                {
-                    if(j == substring.Length - 1) return true;
-                    i++; j++;
-                }
-                else if(j > 0)
-                {
-                    j = pattern[j - 1] + 1;
-                }
-                else
-                {
-                    i++;
-                }
-            }
+        #region Building Pattern
 
-            return false;
-        }
-
+        // Building the pattern required to do the string matching
         private static int[] BuildPattern(string substring)
         {
             int[] pattern = new int[substring.Length];
@@ -68,6 +48,33 @@ namespace Famous_Algorithms
             return pattern;
         }
 
+        #endregion Building Pattern
 
+        #region Finding Match
+        // Doing the actual matching with the pattern array passed.
+        private static bool FindMatch(string str, string substring, int[] pattern)
+        {
+            int i = 0; 
+            int j = 0;
+            while(i + substring.Length - j <= str.Length)
+            {
+                if(str[i] == substring[j])
+                {
+                    if(j == substring.Length - 1) return true;
+                    i++; j++;
+                }
+                else if(j > 0)
+                {
+                    j = pattern[j - 1] + 1;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+
+            return false;
+        }
+        #endregion Finding Match
     }
 }
