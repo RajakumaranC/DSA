@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TestApp.StructuralPattern.ClientComposite">
+    <Position X="16.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Structural Pattern\Composite Pattern\ClientComposite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestApp.StructuralPattern.Component">
+    <Position X="10.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAAAACAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Structural Pattern\Composite Pattern\Component.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestApp.StructuralPattern.Composite" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIQAAAAAAAAAAAAAAAABAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Structural Pattern\Composite Pattern\Composite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestApp.StructuralPattern.CompositeDemo">
+    <Position X="16.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Structural Pattern\Composite Pattern\CompositeDemo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestApp.StructuralPattern.Leaf" Collapsed="true">
+    <Position X="12.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Structural Pattern\Composite Pattern\Leaf.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

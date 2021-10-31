@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TestApp.BehavioralPattern.AbstractHandler">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAIAAAAAAAAgAAA=</HashCode>
+      <FileName>Behavioral Pattern\AbstractHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TestApp.BehavioralPattern.MonkeyHandler">
+    <Position X="9.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral Pattern\MonkeyHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestApp.BehavioralPattern.SquirrelHandler">
+    <Position X="9.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral Pattern\SquirrelHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestApp.BehavioralPattern.DogHandler">
+    <Position X="4.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral Pattern\DogHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestApp.BehavioralPattern.CoRDemo">
+    <Position X="13.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral Pattern\CoRDemo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestApp.BehavioralPattern.ClientCoR">
+    <Position X="13.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral Pattern\ClientCoR.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="TestApp.BehavioralPattern.IHandler">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Behavioral Pattern\IHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

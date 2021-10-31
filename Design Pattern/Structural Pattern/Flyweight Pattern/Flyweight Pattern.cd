@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TestApp.StructuralPattern.Car">
+    <Position X="1.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAEAAAAAAAAAAAAAAAAgAhAAAAAA=</HashCode>
+      <FileName>Structural Pattern\Flyweight Pattern\Car.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestApp.StructuralPattern.Flyweight">
+    <Position X="3.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAgAAA=</HashCode>
+      <FileName>Structural Pattern\Flyweight Pattern\Flyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestApp.StructuralPattern.FlyweightDemo">
+    <Position X="8.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Structural Pattern\Flyweight Pattern\FlyweightDemo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestApp.StructuralPattern.FlyweightFactory">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAABAAAAAAAAAAAAAAEAAAAAAAAAAI=</HashCode>
+      <FileName>Structural Pattern\Flyweight Pattern\FlyweightFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
