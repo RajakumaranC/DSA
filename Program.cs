@@ -1,4 +1,5 @@
 ﻿using Famous_Algorithms;
+using Algorithms.Searching;
 
 namespace Algorithms
 {
@@ -18,6 +19,7 @@ namespace Algorithms
             string[] names = {"Raj", "raj", "RAJ"};
             string a = "rajr";
             WriteLine(a.Substring_KMP("aj"));
+            WriteLine(BinarySearch.Find(list.ToArray(), 20));
             // int[] array = list.ToArray();
             // WriteLine(String.Join(", ", array));
             // WriteLine("===========================================");

@@ -1,26 +1,32 @@
 namespace Algorithms
 {
-    public class LRUResult {
+    public class LRUResult 
+    {
 		public bool found;
 		public int value;
 
-		public LRUResult(bool found, int value) {
+		public LRUResult(bool found, int value) 
+        {
 			this.found = found;
 			this.value = value;
 		}
 	}
-    public class LRUCache {
+
+    public class LRUCache 
+    {
 		public int maxSize;
         public Dictionary<string, DoubleLinkedListNode> store_map;
         public DoubleLinkedList store_list;
 
-		public LRUCache(int maxSize) {
+		public LRUCache(int maxSize) 
+        {
 			this.maxSize = maxSize > 1 ? maxSize : 1;
             store_list = new DoubleLinkedList();
             store_map = new Dictionary<string, DoubleLinkedListNode>();
 		}
 
-		public void InsertKeyValuePair(string key, int value) {
+		public void InsertKeyValuePair(string key, int value) 
+        {
 			
             if(store_map.ContainsKey(key))
             {
@@ -31,17 +37,20 @@ namespace Algorithms
             }
 
             DoubleLinkedListNode node = new DoubleLinkedListNode(value, key);
+
             store_list.SetHead(node);
             store_map.Add(key, node);
+
             if(store_map.Count > maxSize)
                 EvictLeastUsed();
 		}
+
 
         private void EvictLeastUsed()
         {
             if(store_map.Count <= 0)
                 return;
-#nullable disable
+
             string key = store_list.tail.key;
             store_map.Remove(key);
             store_list.RemoveTail();
@@ -53,9 +62,9 @@ namespace Algorithms
             store_list.SetHead(current);
         }
 
-        public LRUResult GetValueFromKey(string key) {
+        public LRUResult GetValueFromKey(string key) 
+        {
 			
-            
             if(store_map.ContainsKey(key))
             {
                 int result = store_map[key].value;
@@ -65,7 +74,8 @@ namespace Algorithms
 			return new LRUResult(false, -1);
 		}
 
-		public string GetMostRecentKey() {
+		public string GetMostRecentKey() 
+        {
 			
             if(store_map.Count > 0)
             {
